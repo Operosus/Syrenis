@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Data Privacy & Digital Regulation Landscape 2025-2026</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 400px;
+            }
+        }
+        .kpi-card {
+            background-color: white;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            text-align: center;
+            border-left: 5px solid #0052CC;
+        }
+        .section-title {
+            color: #0052CC;
+        }
+        .flowchart-step {
+            border: 2px solid #0065FF;
+            background-color: #DEEBFF;
+            color: #0747A6;
+        }
+        .flowchart-arrow {
+            color: #0065FF;
+        }
+        .nav-link {
+            transition: color 0.3s ease;
+        }
+        .nav-link.active {
+            color: #0052CC;
+            font-weight: 700;
+            border-bottom: 2px solid #0052CC;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <h1 class="text-xl font-bold text-[#0052CC]">Global Privacy Radar</h1>
+            <div class="hidden md:flex space-x-8" id="nav-menu">
+                <a href="#us-laws" class="nav-link text-slate-600 hover:text-[#0052CC]">US</a>
+                <a href="#eu-laws" class="nav-link text-slate-600 hover:text-[#0052CC]">Europe</a>
+                <a href="#global-laws" class="nav-link text-slate-600 hover:text-[#0052CC]">Global</a>
+                <a href="#trends" class="nav-link text-slate-600 hover:text-[#0052CC]">Trends</a>
+                <a href="#best-practices" class="nav-link text-slate-600 hover:text-[#0052CC]">Best Practices</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto p-4 md:p-8">
+
+        <section id="hero" class="text-center py-12">
+            <h2 class="text-4xl md:text-5xl font-bold section-title mb-4">The 2025-2026 Global Data Privacy & Digital Regulation Landscape</h2>
+            <p class="text-lg text-slate-600 max-w-3xl mx-auto">A tidal wave of new data privacy laws is reshaping the digital world. This infographic provides a comprehensive analysis of the key frameworks, enforcement trends, and compliance imperatives for multinational organizations.</p>
+        </section>
+
+        <section id="us-laws" class="mb-16 scroll-mt-20">
+            <h3 class="text-3xl font-bold text-center mb-8 section-title">United States: A Growing Patchwork of State Laws</h3>
+            <p class="text-center text-slate-600 max-w-3xl mx-auto mb-12">With no federal law, the U.S. compliance landscape is defined by a complex web of state-level regulations. 2025 marks a significant expansion, with eight new laws taking effect, followed by more in 2026.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                <div class="kpi-card">
+                    <p class="text-5xl font-bold text-[#0065FF]">8</p>
+                    <p class="text-slate-600 mt-2">New State Privacy Laws Effective in 2025</p>
+                </div>
+                <div class="kpi-card">
+                    <p class="text-5xl font-bold text-[#0065FF]">3+</p>
+                    <p class="text-slate-600 mt-2">Major State Privacy Laws Slated for 2026</p>
+                </div>
+                <div class="kpi-card">
+                    <p class="text-5xl font-bold text-[#0065FF]">90%</p>
+                    <p class="text-slate-600 mt-2">Of new 2025 laws mandate Data Protection Assessments for high-risk activities.</p>
+                </div>
+                 <div class="kpi-card">
+                    <p class="text-5xl font-bold text-[#0065FF]">100%</p>
+                    <p class="text-slate-600 mt-2">Of new 2025/26 laws require opt-in consent for sensitive data.</p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md p-6 mb-12">
+                <h4 class="text-2xl font-bold text-center mb-6 text-slate-700">Comparison of Max Penalties in New US State Laws (2025)</h4>
+                <p class="text-center text-slate-500 mb-6">This chart illustrates the maximum financial penalties per violation under the new state laws coming into effect in 2025. Note that some states, like New Jersey and Maryland, have escalating penalties for subsequent offenses.</p>
+                <div class="chart-container mx-auto">
+                    <canvas id="usStatePenaltiesChart"></canvas>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <h4 class="text-2xl font-bold text-center mb-6 text-slate-700">FTC Sectoral Enforcement Focus</h4>
+                <p class="text-center text-slate-500 mb-6">The Federal Trade Commission (FTC) continues targeted enforcement in key sectors. The updated COPPA Rule, with a compliance deadline of April 22, 2026, significantly strengthens protections for children's data.</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                    <div class="p-4 bg-blue-50 rounded-lg">
+                        <p class="text-4xl mb-2">⚕️</p>
+                        <h5 class="font-bold text-lg text-[#0747A6]">Health (HBNR)</h5>
+                        <p class="text-sm text-slate-600">Increased scrutiny on health apps and connected devices sharing user data, with enforcement against illegal sharing for advertising.</p>
+                    </div>
+                    <div class="p-4 bg-blue-50 rounded-lg">
+                        <p class="text-4xl mb-2">🎓</p>
+                        <h5 class="font-bold text-lg text-[#0747A6]">Education (COPPA)</h5>
+                        <p class="text-sm text-slate-600">Major updates require separate parental consent for data disclosure to third parties and mandate clear data retention policies.</p>
+                    </div>
+                    <div class="p-4 bg-blue-50 rounded-lg">
+                        <p class="text-4xl mb-2">💰</p>
+                        <h5 class="font-bold text-lg text-[#0747A6]">Finance (GLBA)</h5>
+                        <p class="text-sm text-slate-600">Continued oversight of how financial institutions share and safeguard sensitive consumer financial data.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="eu-laws" class="mb-16 scroll-mt-20">
+            <h3 class="text-3xl font-bold text-center mb-8 section-title">Europe: Pioneering Comprehensive Digital Governance</h3>
+            <p class="text-center text-slate-600 max-w-3xl mx-auto mb-12">The EU continues to set global standards with groundbreaking regulations. DORA, the Data Act, and the AI Act build upon GDPR's foundation, creating a robust framework for the digital economy.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h4 class="text-2xl font-bold mb-4 text-slate-700">EU AI Act: A Risk-Based Approach</h4>
+                     <p class="text-slate-500 mb-6">The world's first comprehensive AI law categorizes systems by risk, with stringent rules for high-risk applications and outright bans for unacceptable uses. This tiered approach is set to become a global model for AI governance.</p>
+                    <div class="chart-container mx-auto">
+                        <canvas id="euAiActChart"></canvas>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6">
+                     <h4 class="text-2xl font-bold mb-4 text-slate-700">Key EU Regulation Timeline</h4>
+                     <p class="text-slate-500 mb-6">The next 18 months are critical for compliance with several major EU digital regulations. This timeline highlights key effective dates that organizations must have on their radar.</p>
+                    <div class="space-y-6 pt-4">
+                        <div class="relative pl-8">
+                            <div class="absolute left-0 top-1 w-4 h-4 bg-[#0052CC] rounded-full border-4 border-white"></div>
+                            <p class="font-bold text-[#0052CC]">Jan 17, 2025</p>
+                            <p class="font-semibold text-slate-700">Digital Operational Resilience Act (DORA)</p>
+                            <p class="text-sm text-slate-500">Applies to financial entities and their critical ICT providers.</p>
+                        </div>
+                         <div class="relative pl-8">
+                            <div class="absolute left-0 top-1 w-4 h-4 bg-[#0065FF] rounded-full border-4 border-white"></div>
+                            <p class="font-bold text-[#0065FF]">Aug 2, 2025</p>
+                            <p class="font-semibold text-slate-700">EU AI Act (GPAI Models)</p>
+                            <p class="text-sm text-slate-500">Obligations for General-Purpose AI models become binding.</p>
+                        </div>
+                        <div class="relative pl-8">
+                            <div class="absolute left-0 top-1 w-4 h-4 bg-[#2684FF] rounded-full border-4 border-white"></div>
+                            <p class="font-bold text-[#2684FF]">Sep 12, 2025</p>
+                            <p class="font-semibold text-slate-700">EU Data Act</p>
+                            <p class="text-sm text-slate-500">Provisions on data sharing for IoT and unfair contract terms apply.</p>
+                        </div>
+                        <div class="relative pl-8">
+                             <div class="absolute left-0 top-1 w-4 h-4 bg-[#4C9AFF] rounded-full border-4 border-white"></div>
+                            <p class="font-bold text-[#4C9AFF]">Aug 2, 2026</p>
+                            <p class="font-semibold text-slate-700">EU AI Act (High-Risk Systems)</p>
+                            <p class="text-sm text-slate-500">Rules for high-risk AI systems take effect.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="global-laws" class="mb-16 scroll-mt-20">
+            <h3 class="text-3xl font-bold text-center mb-8 section-title">Global Hotspots: APAC, LATAM & Africa</h3>
+            <p class="text-center text-slate-600 max-w-3xl mx-auto mb-12">Beyond the US and EU, numerous countries are rapidly advancing their own data privacy frameworks, blending global principles with local priorities.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-md p-6 flex flex-col">
+                    <h4 class="text-2xl font-bold mb-4 text-slate-700">🇮🇳 India: DPDPA</h4>
+                    <p class="text-slate-500 mb-4 flex-grow">India's new consent-centric law introduces novel concepts like "Consent Managers" and enhanced obligations for "Significant Data Fiduciaries," requiring a tailored compliance approach.</p>
+                    <div class="mt-auto space-y-2 text-sm">
+                        <p><span class="font-bold text-[#0747A6]">Key Feature:</span> Itemized, standalone consent notices.</p>
+                        <p><span class="font-bold text-[#0747A6]">High Risk:</span> No materiality threshold for breach reporting.</p>
+                        <p><span class="font-bold text-[#0747A6]">Penalty:</span> Up to ~$30M USD.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 flex flex-col">
+                    <h4 class="text-2xl font-bold mb-4 text-slate-700">🇧🇷 Brazil: LGPD & AI</h4>
+                    <p class="text-slate-500 mb-4 flex-grow">Brazil's regulator (ANPD) is proactively developing rules for AI governance, biometric data, and children's data, with a strong focus on the right to human review of automated decisions.</p>
+                     <div class="mt-auto space-y-2 text-sm">
+                        <p><span class="font-bold text-[#0747A6]">Key Feature:</span> Human review of automated decisions (Art. 20).</p>
+                        <p><span class="font-bold text-[#0747A6]">High Risk:</span> Cross-border transfers require ANPD-approved clauses.</p>
+                        <p><span class="font-bold text-[#0747A6]">Focus:</span> AI, biometrics, children's data.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 flex flex-col">
+                    <h4 class="text-2xl font-bold mb-4 text-slate-700">�🇳 China: PIPL & Data Control</h4>
+                    <p class="text-slate-500 mb-4 flex-grow">China continues to assert data sovereignty with strict controls on cross-border data transfers, AI content labeling, and a broad definition of "important data," backed by significant enforcement.</p>
+                    <div class="mt-auto space-y-2 text-sm">
+                        <p><span class="font-bold text-[#0747A6]">Key Feature:</span> Mandatory AI-generated content labeling.</p>
+                        <p><span class="font-bold text-[#0747A6]">High Risk:</span> Cross-border data transfers now a privilege, not a right.</p>
+                        <p><span class="font-bold text-[#0747A6]">Penalty:</span> Up to 5% of annual revenue.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="trends" class="mb-16 scroll-mt-20">
+            <h3 class="text-3xl font-bold text-center mb-8 section-title">Cross-Jurisdictional Trends</h3>
+            <p class="text-center text-slate-600 max-w-3xl mx-auto mb-12">While regulations diverge on specifics like universal opt-out, several key principles are converging globally, defining the new baseline for compliance.</p>
+            <div class="bg-white rounded-lg shadow-md p-6">
+                 <h4 class="text-2xl font-bold text-center mb-6 text-slate-700">Areas of Convergence vs. Divergence</h4>
+                 <p class="text-center text-slate-500 mb-8">This chart shows the level of global regulatory alignment on key privacy issues. While principles like data subject rights are widely adopted (convergence), the mechanics of implementation, such as for cross-border data transfers, vary significantly (divergence).</p>
+                <div class="chart-container mx-auto">
+                    <canvas id="trendsChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section id="best-practices" class="scroll-mt-20">
+            <h3 class="text-3xl font-bold text-center mb-8 section-title">Actionable Best Practices for Multinational Compliance</h3>
+            <p class="text-center text-slate-600 max-w-3xl mx-auto mb-12">Navigating this complex environment requires a proactive, integrated, and adaptable strategy. Organizations should prioritize the following actions to mitigate risk and build trust.</p>
+            <div class="space-y-8">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="flex-shrink-0 w-24 h-24 rounded-full flowchart-step flex items-center justify-center text-4xl font-bold mb-4 md:mb-0 md:mr-6">1</div>
+                    <div class="flex-grow">
+                        <h4 class="text-xl font-bold text-slate-800">Adopt a Centralized, Scalable Framework</h4>
+                        <p class="text-slate-600">Build a core privacy program based on the most stringent common principles (e.g., GDPR) and create modular extensions to address specific jurisdictional requirements and thresholds.</p>
+                    </div>
+                </div>
+                <div class="flex justify-center my-4">
+                    <span class="flowchart-arrow text-4xl">⬇️</span>
+                </div>
+                <div class="flex flex-col md:flex-row-reverse items-center">
+                    <div class="flex-shrink-0 w-24 h-24 rounded-full flowchart-step flex items-center justify-center text-4xl font-bold mb-4 md:mb-0 md:ml-6">2</div>
+                    <div class="flex-grow text-right">
+                        <h4 class="text-xl font-bold text-slate-800">Embed Privacy & AI Governance by Design</h4>
+                        <p class="text-slate-600">Integrate privacy and AI ethics into the entire lifecycle of products and services. Conduct proactive Data Protection Assessments (DPAs) and bias audits for all high-risk activities.</p>
+                    </div>
+                </div>
+                <div class="flex justify-center my-4">
+                     <span class="flowchart-arrow text-4xl">⬇️</span>
+                </div>
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="flex-shrink-0 w-24 h-24 rounded-full flowchart-step flex items-center justify-center text-4xl font-bold mb-4 md:mb-0 md:mr-6">3</div>
+                    <div class="flex-grow">
+                        <h4 class="text-xl font-bold text-slate-800">Automate and Strengthen Governance</h4>
+                        <p class="text-slate-600">Leverage technology for consent management and DSAR fulfillment. Strengthen third-party risk management and maintain active regulatory intelligence to monitor for changes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-slate-800 text-white mt-16">
+        <div class="container mx-auto px-6 py-4 text-center text-sm">
+            <p>This infographic is for informational purposes only and does not constitute legal advice. Data is based on the "Comprehensive Analysis of New and Emerging Data Privacy and Digital Regulation Frameworks (2025-2026)" report.</p>
+            <p>&copy; 2025 Global Privacy Radar. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const brilliantBlues = {
+            primary: '#0052CC', 
+            secondary: '#0065FF', 
+            accent1: '#2684FF', 
+            accent2: '#4C9AFF', 
+            accent3: '#B3D4FF',
+            neutral: '#DEEBFF',
+            text: '#0747A6'
+        };
+
+        function wrapLabel(str, maxWidth) {
+            if (str.length <= maxWidth) {
+                return str;
+            }
+            const words = str.split(' ');
+            let lines = [];
+            let currentLine = words[0];
+
+            for (let i = 1; i < words.length; i++) {
+                if ((currentLine + ' ' + words[i]).length > maxWidth) {
+                    lines.push(currentLine);
+                    currentLine = words[i];
+                } else {
+                    currentLine += ' ' + words[i];
+                }
+            }
+            lines.push(currentLine);
+            return lines;
+        }
+        
+        const tooltipTitleCallback = (tooltipItems) => {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+                return label.join(' ');
+            }
+            return label;
+        };
+
+        const commonChartOptions = {
+            maintainAspectRatio: false,
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'bottom',
+                     labels: {
+                        color: '#475569'
+                    }
+                },
+                tooltip: {
+                    callbacks: {
+                        title: tooltipTitleCallback
+                    }
+                }
+            },
+            scales: {
+                x: {
+                    ticks: { color: '#475569' },
+                    grid: { display: false }
+                },
+                y: {
+                    ticks: { color: '#475569' },
+                    grid: { color: '#e2e8f0' }
+                }
+            }
+        };
+
+        const usStatePenaltiesCtx = document.getElementById('usStatePenaltiesChart').getContext('2d');
+        new Chart(usStatePenaltiesCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Delaware', 'Iowa', 'Nebraska', 'New Hampshire', 'New Jersey', 'Tennessee', 'Minnesota', 'Maryland'],
+                datasets: [{
+                    label: 'Max Penalty per Violation (USD)',
+                    data: [10000, 7500, 7500, 10000, 10000, 7500, 7500, 10000],
+                    backgroundColor: [
+                        brilliantBlues.primary, brilliantBlues.secondary, brilliantBlues.accent1, brilliantBlues.accent2,
+                        brilliantBlues.primary, brilliantBlues.secondary, brilliantBlues.accent1, brilliantBlues.accent2
+                    ],
+                    borderColor: '#ffffff',
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                ...commonChartOptions,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            callback: function(value) {
+                                return '$' + value.toLocaleString();
+                            },
+                            color: '#475569'
+                        },
+                        grid: { color: '#e2e8f0' }
+                    },
+                    x: {
+                        ticks: { color: '#475569' },
+                        grid: { display: false }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: tooltipTitleCallback,
+                            label: function(context) {
+                                let label = context.dataset.label || '';
+                                if (label) {
+                                    label += ': ';
+                                }
+                                if (context.parsed.y !== null) {
+                                    label += new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(context.parsed.y);
+                                }
+                                return label;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        const euAiActCtx = document.getElementById('euAiActChart').getContext('2d');
+        new Chart(euAiActCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Unacceptable Risk (Banned)', 'High-Risk (Strict Obligations)', 'Limited/Minimal Risk (Transparency Rules)'],
+                datasets: [{
+                    label: 'EU AI Act Risk Tiers',
+                    data: [20, 45, 35],
+                    backgroundColor: [brilliantBlues.primary, brilliantBlues.secondary, brilliantBlues.accent2],
+                    borderColor: '#ffffff',
+                    borderWidth: 4,
+                    hoverOffset: 4
+                }]
+            },
+            options: {
+                maintainAspectRatio: false,
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            color: '#475569',
+                            boxWidth: 20,
+                            padding: 20
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: tooltipTitleCallback
+                        }
+                    }
+                },
+                cutout: '60%'
+            }
+        });
+        
+        const trendsCtx = document.getElementById('trendsChart').getContext('2d');
+        new Chart(trendsCtx, {
+            type: 'bar',
+            data: {
+                labels: [
+                    wrapLabel('Data Protection Assessments', 16), 
+                    wrapLabel('Opt-in for Sensitive Data', 16), 
+                    wrapLabel('Core Data Subject Rights', 16), 
+                    wrapLabel('Cross-Border Transfer Rules', 16), 
+                    wrapLabel('Universal Opt-Out Mandates', 16)
+                ],
+                datasets: [{
+                    label: 'Convergence (High Alignment)',
+                    data: [90, 95, 85, 20, 30],
+                    backgroundColor: brilliantBlues.secondary,
+                }, {
+                    label: 'Divergence (Low Alignment)',
+                    data: [10, 5, 15, 80, 70],
+                    backgroundColor: brilliantBlues.accent3,
+                }]
+            },
+            options: {
+                ...commonChartOptions,
+                indexAxis: 'y',
+                scales: {
+                    x: {
+                        stacked: true,
+                        ticks: {
+                            callback: function(value) { return value + "%" },
+                            color: '#475569'
+                        },
+                        grid: { color: '#e2e8f0' }
+                    },
+                    y: {
+                        stacked: true,
+                        ticks: { color: '#475569' },
+                        grid: { display: false }
+                    }
+                },
+                 plugins: {
+                    legend: {
+                        position: 'top',
+                         labels: {
+                            color: '#475569'
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: tooltipTitleCallback,
+                             label: function(context) {
+                                let label = context.dataset.label || '';
+                                if (label) {
+                                    label += ': ';
+                                }
+                                if (context.parsed.x !== null) {
+                                    label += context.parsed.x + '%';
+                                }
+                                return label;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('#nav-menu a');
+            let current = '';
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 100) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+    </script>
+</body>
+</html>
+�
